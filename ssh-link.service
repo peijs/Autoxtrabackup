@@ -1,0 +1,12 @@
+[Unit]
+Description=ssh port forwarding service.
+After=network.target
+[Service]
+Type=forking
+ExecStart= /bin/sh -c 'ssh -N -f -g -L 0.0.0.0:10052:31.107.0.509:10052 root@localhost'
+Restart=always
+RestartSec=5
+User=root
+Group=root
+[Install] 
+WantedBy=multi-user.target
