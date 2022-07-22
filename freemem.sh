@@ -8,7 +8,7 @@ echo "===========================" >> /var/log/mem.log
 date >> /var/log/mem.log
 echo "Memory usage | [Use：${used}MB][Free：${free}MB]" >> /var/log/mem.log
 
-if [ $free -le 8196 ] ; then
+if [ $free -le 4096 ] ; then
                 sync && echo 1 > /proc/sys/vm/drop_caches
                 sync && echo 2 > /proc/sys/vm/drop_caches
                 sync && echo 3 > /proc/sys/vm/drop_caches
