@@ -1,5 +1,5 @@
 #/bin/bash
-#*/30 * * * * root /root/freemem.sh
+#*/30 * * * * root /usr/local/bin/freemem.sh
 . /etc/profile
 used=`free -m | awk 'NR==2' | awk '{print $3}'`
 free=`free -m | awk 'NR==2' | awk '{print $4}'`
